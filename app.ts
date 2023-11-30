@@ -5,7 +5,7 @@ dotenv.config();
 const app: Express = express()
 const port = process.env.PORT
 
-app.get('/',(req: Request, res: Response)=>{
+app.get<{message: string}>('/',(req: Request, res: Response)=>{
     res.send({message:"response get"})
 })
 
